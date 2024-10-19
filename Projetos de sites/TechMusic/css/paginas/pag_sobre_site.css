@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+
+main {
+    background-color: #f7f7f7c5 !important;
+}
+
+.fundo {
+    background-image: url("../../img/img_fundo/piano_850.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.textimg {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white !important;
+    padding: 80px 80px;
+    margin: 0px;
+    background-color: #17181b94 !important;
+}
+
+.text1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 70px 20px 82px;
+    margin-bottom: 0px;
+}
+
+.img_separa {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    background: url("../../img/img_fundo/por_do_sol_music.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 270px;
+}
+
+.text_img {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white !important;
+    padding: 80px 80px;
+    margin: 0px;
+    background-color: #17181b94 !important;
+}
+
+.text_bord {
+    font-size: 38px;
+    padding: 30px 20px 40px;
+    margin-bottom: 0px;
+    text-align: center;
+    background: #383838d5;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(26, 25, 25, 0.192);
+    box-sizing: border-box;
+}
+
+
+.sobre_inicio {
+    margin-top: 15px;
+    background-color: #cfcfcfc0 !important;
+    padding: 15px;
+    min-height: 80px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.text_titulo {
+    color: #222427e1 !important;
+    font-size: 40px;
+    padding: 20px 20px;
+    margin: 0;
+}
+
+.sobre_site {
+    margin: 10px 40px;
+    padding: 10px 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.intro {
+    margin: 10px;
+}
+
+.titulo_sobre {
+    color: #222222e5 !important;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.4em;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.text_conteudo {
+    margin: 0;
+    padding-top: 20px;
+    color: #333333 !important;
+    font-size: 1.6rem;
+}

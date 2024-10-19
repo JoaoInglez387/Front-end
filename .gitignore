@@ -1,0 +1,11 @@
+#Legenda:
+# * Ignorar Qualquer coisa
+# ? Um caracter
+# Invertalos [a- z] ou [0 - 9]
+# ! excessão de ignore
+# . Arquivo
+# "Nome" O Diretorio
+# "/" é a acessando arquvio dentro da pasta
+
+#Diretorio:
+Material Estudo

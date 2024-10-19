@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+main {
+    background-color: var(--cor-fundo);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.home {
+    margin: 0 75px;
+}
+
+.content_encontrar_loja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4.8rem;
+    text-align: center;
+    background-color: var(--cor-fundo-content2);
+    margin: 32px 0;
+}
+
+.content-text-encontrar_loja {
+    color: var(--cor-letras-cont);
+}
+
+.content-text-encontrar_loja > h1 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    line-height: 1.75;
+    margin-bottom: 2.4rem;
+}
+
+.content-text-encontrar_loja > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.75;
+    margin-bottom: 32px;
+    color: var(--cor-letras-cla);
+}
+
+
+@media screen and (max-width: 1400px){
+    .content_encontrar_loja > .content-text-encontrar_loja > h1 {
+        font-size: 1.6rem;
+    }
+
+    .content_encontrar_loja > .content-text-encontrar_loja > p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .content_encontrar_loja > .content-text-encontrar_loja > p {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 590px) {  
+    .home {
+        margin: 0 25px;
+    }
+
+    .content_encontrar_loja {
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 420px) {  
+    .home {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {  
+    .content_encontrar_loja > .content-text-encontrar_loja > h1 {
+        font-size: 1.3rem;
+    }
+}

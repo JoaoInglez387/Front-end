@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+
+.fundo_corda {
+    background-image: url("../../img/img_fundo/categoria/instrumento_corda_790.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_percussao {
+    background-image: url("../../img/img_fundo/categoria/fundo_bateria_781.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_sopro {
+    background-image: url("../../img/img_fundo/categoria/sopro_fundo_780.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_teclas {
+    background-image: url("../../img/img_fundo/categoria/piano_fundo_790.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_iluminacao{
+    background-image: url("../../img/img_fundo/categoria/iluminacao_fundo_790.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_som {
+    background-image: url("../../img/img_fundo/categoria/som_fundo_780.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.fundo_acessorio {
+    background-image: url("../../img/img_fundo/categoria/acessorio_fundo_780.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 370px;
+    text-align: center;
+}
+
+.textimg {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 80px 80px;
+    margin: 0px;
+    background-color: #17181b94;
+}
+
+.text1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 80px 20px 82px;
+    margin-bottom: 0px;
+}

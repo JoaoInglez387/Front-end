@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+
+.categoria_produtos {
+    background: white;
+    margin: 30px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px 0 rgba(26, 25, 25, 0.192);
+    box-sizing: border-box;
+}
+
+.div_text_categoria {
+    width: 100%;
+}
+
+.titulo_categoria {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.produtos_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.g_produt {
+    width: 40vh;
+}
+
+.conteudo_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.text_list_produtos {
+    margin-top: 5px;  
+}
+
+.text_titulo_produtos {
+    margin-top: 2px; 
+    margin-bottom: 0;
+    font-size: 1.3em;
+    color: #0e0f11 !important;
+}
+
+.text_sub_produtos {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #0e0f11 !important;
+}
+
+.text_desc_produtos {
+    font-size: 1rem;
+    text-decoration: line-through !important;
+    color:#4e4e4e !important;
+}
+
+.text_preco_produtos {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#0e0f11 !important;
+}
+
+.text_extra_produtos {
+    font-size: 16px;
+    color: #0e0f11 !important;
+}
+
+.frete_produtos {
+    color: #094cd3 !important;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 930px) {
+    .g_produt {
+        width: 30vh;
+    }
+}
+@media screen and (max-width: 330px) {
+    .g_produt {
+        width: 20vh;
+    }
+}

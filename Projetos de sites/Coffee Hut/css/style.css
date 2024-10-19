@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+
+:root{
+    --cor-fundo: #FFFFFF;
+    --cor-fundo-content1: #F9EDD7;
+    --cor-fundo-content2: #849985;
+    --cor-fundo-content3: #F5F5F5;
+
+    --cor-letras: #000000;
+    --cor-letras-mais-clara: #FFFFFF;
+    --cor-letras-cont: #29442B;
+    --cor-letras-cont-esc: #333333;
+
+    --cor-link: #849985;
+    --cor-link-button-sabia-mais: #436945;
+    --cor-link-button-cla: #6D7E6E;
+    --cor-link-button-esc: #1d2e1e;
+    --cor-link-footer: #868686;
+    
+    --hover-barra-lateral: #0000000d;
+    --barra-sytle: #e0e0e0;
+
+    --cor-sombra-cx-01_nav:#0000001a; 
+    --cor-sombra-cx-03_nav:#00000012;
+
+    --cor-sombra-cx-01_footer: #000000b3; 
+    --cor-sombra-cx-02_footer: #00000080;
+    --cor-sombra-cx-03_footer: #0000001a;
+    --cor-overley: #00000080;
+
+    --cor-sytle-footer-copyright:#0000008f;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+

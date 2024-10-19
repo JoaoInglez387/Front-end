@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+footer {
+    width: 100%;
+    background: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.footer_conteudo_sobre {
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+.footer_logo_sobre {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.logo_img_sobre {
+    width: 32vh;
+}
+
+.footer_contatos h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+}
+
+.footer_rede_social {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+.footer_links_sobre {
+    text-decoration: none;
+}
+
+.footer_rede_social .footer_links_sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.footer_rede_social .footer_links_sobre i {
+    font-size: 1.25rem;    
+}
+
+.footer_rede_social .footer_links_sobre:hover {
+    opacity: 0.8;
+}
+
+.footer_list_sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer_list_sobre h3 {
+    color: #f5f5f5;
+}
+
+.footer_list_sobre .footer_links_sobre {
+    color: #a5afb8ee;
+    transition: all 0.4s;
+}
+
+.footer_list_sobre .footer_links_sobre:hover {
+    color: #2460af;
+}
+
+
+.footer_copyright_sobre {
+    display: flex;
+    justify-content: center;
+    background-color: #0e0c0c;
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 875px) {
+    .footer_conteudo_sobre {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .logo_img_sobre {
+        width: 30vh
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .footer_conteudo_sobre {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+    .logo_img_sobre {
+        width: 25vh
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer_conteudo_sobre {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+    .logo_img_sobre {
+        width: 19vh
+    }
+}

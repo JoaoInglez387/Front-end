@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body {
+    background-color: #B8994B;
+    margin: 0px;
+}
+
+header {
+    background-color: #393733;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 5px;
+}
+
+nav {
+    background-color: #393733;
+    padding: 10px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    margin: 5px 30px auto 20px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+.inicio {
+    text-align: center;
+    padding: 50px;
+    width: 930px;
+    margin: 0px auto;
+    background-color: #f5f3efea;
+    border-top: 20px solid #d8ab3bda;
+}
+
+.resumo {
+    text-align: center;
+    padding: 50px;
+    width: 930px;
+    margin: 0px auto;
+    background-color: #f5f3efea;
+    border-top: 20px solid #d8ab3bda;
+}
+
+.autor {
+    text-align: center;
+    padding: 50px;
+    width: 930px;
+    margin: 0px auto;
+    background-color: #f5f3efea;
+    border-top: 20px solid #d8ab3bda;
+}
+
+.fotoautor {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #24242485;
+}
+
+.visao {
+    text-align: center;
+    padding: 50px;
+    width: 930px;
+    margin: 0px auto;
+    background-color: #f5f3efea;
+    border-top: 20px solid #d8ab3bda;
+}
+
+footer {
+    background-color: #393733;
+    color: white;
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 780;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 780;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 27px;
+    font-weight: 780px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: bold;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.textfinali {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 25px;
+    padding: 10px;
+}
+
+a {
+    background-color: #252522;
+    border-radius: 20px;
+    padding: 7px 18px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.negrito {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.espaco {
+    margin-right: 5px;
+    transform: translate(-4px, 20%);
+}

@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B');
+
+.principal {
+    background-image: url("../../img/img_fundo/baixo_1100.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 430px;
+    text-align: center;
+}
+
+.textimg {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white !important;
+    padding: 80px 80px;
+    margin: 0px;
+    background-color: #17181b94 !important;
+}
+
+.text1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px 20px 40px;
+    margin-bottom: 0px;
+}
+
+.text2 {
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px 20px 60px;
+    margin-top: 0px;
+}
+
+.vendas {
+    background:#ffffff;
+    margin: 30px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px 0 rgba(26, 25, 25, 0.192) !important;
+    box-sizing: border-box;
+}
+
+.div_titulo_vendas {
+    width: 100%;
+}
+
+.titulo_venda {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.div_produtos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.produto_conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.text_produto {
+    margin-top: 5px;
+}
+
+.g_produt {
+    width: 40vh;
+}
+
+.text_titulo {
+    margin-top: 2px; 
+    margin-bottom: 0;
+    font-size: 1.3em;
+    color: #0e0f11 !important;
+}
+
+.text_sub {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #0e0f11 !important;
+}
+
+.text_desc {
+    font-size: 1rem;
+    text-decoration: line-through !important;
+    color:#4e4e4e !important;
+}
+
+.text_preco {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#0e0f11 !important;
+}
+
+.text_extra {
+    font-size: 16px;
+    color: #0e0f11 !important;
+}
+
+.frete {
+    color: #094cd3 !important;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 930px) {
+    .g_produt {
+        width: 30vh;
+    }
+}
+@media screen and (max-width: 330px) {
+    .g_produt {
+        width: 18vh;
+    }
+}
