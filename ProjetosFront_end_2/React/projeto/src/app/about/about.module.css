@@ -4,6 +4,7 @@
 }
 .div_pag {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -11,6 +12,19 @@
 .div_pag > .titule {
     font-size: 25px;
     font-weight: 600;
-    color: var(--cor-letras-marror);
     margin: 20px 0 0 0;
+}
+
+.div_p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paragrafo {
+    color: cadetblue;
+}
+
+#paragrafoUnico {
+    background-color: tomato;
 }

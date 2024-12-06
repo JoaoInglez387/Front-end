@@ -1,47 +1,45 @@
 export default function Listas() {
-  /*   const racas = ['Vira-lata','Pit-bull', 'Pug', 'Shitzu', 'Labrador'];
-
+    const racas = ["Vira-lata", "Pit-bull", "Shitsu", "Labrador"]
 
     const racasObj = [
         {
-            id: 1,
-            raca: 'Vira-lata'
+            id:1,
+            raca:"Vira-lata",
         },
         {
-            id: 2,
-            raca: 'Pit-bull'
+            id:2,
+            raca:"Pit-bull",
         },
         {
-            id: 3,
-            raca: 'Pug'
+            id:3,
+            raca:"Shitsu",
         },
         {
-            id: 4,
-            raca: 'Shitzu'
-        },
-        {
-            id: 5,
-            raca: 'Labrador'
+            id:4,
+            raca:"labrador",
         }
-    ]; */
+    ]
 
-    return (
+    return(
         <div>
-            {/* <h1>Listas</h1>
-            <h2>Lista Comum</h2>          
+            <h1>Listas</h1>
+            <p>{racasObj[0].raca}</p>
+            <h1>lista comum</h1>
             <ul>
-                {racas.map((raca, i) => (
-                    <li key={i}>{i+1}{raca}</li>
-                ))}; 
+                {racas.map((raca, i)=> (
+                    <li key={i}> {i+1} - {raca}</li>
+                ))}
             </ul>
-
-            <h2>Lista de Objetos</h2>
-            {racasObj.map((racasObj) => (
-                <div key={racasObj.id}>
-                    <h3>{racasObj.id} </h3>
-                    <p>{racasObj.raca}</p>
-                </div>
-            ))}; */}
+            
+            <div>
+                <h2>lista de Objetos </h2>
+                {racasObj.map((racaObj)=> (
+                    <div key={racaObj.id}>
+                        <h3>{racaObj.id}</h3>
+                        <p>{racaObj.raca}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-    );
+    )
 }
