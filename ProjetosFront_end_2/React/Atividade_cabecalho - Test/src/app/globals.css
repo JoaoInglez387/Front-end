@@ -1,0 +1,38 @@
+:root {
+  --cor-box-show: #0000001a;
+  --cor-letras-marror:#281A14;
+  --cor-background-color-nav:#FAF3E0;
+  --cor-menu: #F5E8C7;
+  --style-linha: #A0522D;
+  --cor-branco: #FFFFFF;
+  --cor-laranja-queimado: #D2691E;
+  --cor-marror-claro: #503C16;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+

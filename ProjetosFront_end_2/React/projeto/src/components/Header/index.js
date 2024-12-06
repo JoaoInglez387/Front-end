@@ -1,5 +1,5 @@
 'use client';
-;import styles from "./header.module.css";
+import styles from "./header.module.css";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,11 +13,12 @@ export default function Header () {
                 <nav className = {styles.nav}>
                     <ul className = {styles.list}>
                         <li><Link href='/'>Home</Link></li>
-                        <li><Link href='/sobre'>Sobre</Link></li>
-                        <li><Link href='/contato'>Contato</Link></li>
+                        <li><Link href='/about'>Sobre</Link></li>
+                        <li><Link href='/contact'>Contato</Link></li>
+                        <li><Link href='/listas'>Lista</Link></li>
                     </ul>
                 </nav>
             }
         </header>
-    )
+    );
 };
