@@ -30,7 +30,7 @@ export default function Props() {
             <h1>Props</h1>
             <div>
                 {dogs.map((dog) => (
-                    <Card key={dog.id} nome={dog.nome} raca={dog.raca} peso={dog.peso} cor={dog.cor} />
+                    <Card key={dog.id} id={dog.id} nome={dog.nome} raca={dog.raca} peso={dog.peso} cor={dog.cor} />
                 ))}
             </div>
         </div>

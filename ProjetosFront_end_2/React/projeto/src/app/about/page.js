@@ -7,7 +7,7 @@ export default function About() {
           <h1 className={styles.titule}>Sobre</h1>
           <div className={styles.div_p}>
             <p className={styles.paragrafo}> Minha segunda página</p>
-            <p id={styles.paragrafoUnico}></p>
+            <p id={styles.paragrafoUnico}>Teste</p>
           </div>
         </div>
     </main>
