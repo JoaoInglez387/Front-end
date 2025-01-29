@@ -93,8 +93,8 @@ export default function Efeitos() {
             }
 
             {
-                citySelected && 
-                <p>{citySelected}</p>
+                citySelected ? 
+                <p>{citySelected}</p> : <p>Aguardando!</p>
             }
 
             {/*<button onClick={() => (setCont(cont + 1))}>Adicionar</button>
