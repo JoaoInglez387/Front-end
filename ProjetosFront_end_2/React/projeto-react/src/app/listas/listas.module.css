@@ -1,0 +1,56 @@
+.main {
+    margin: 0;
+    padding: 0;
+}
+
+.div_pag {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.titule {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0 0 0;
+}
+
+.descricao {
+	padding: 25px 0 30px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+}
+
+
+.lista {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.subTitulos {
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+}
+
+.objeto {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.lista_simples {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+}

@@ -1,0 +1,59 @@
+.main {
+    margin: 0;
+    padding: 0;
+}
+.div_pag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div_pag > .titule {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0 30px 0;
+}
+
+.botao {
+    border: 2px black;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+}
+
+.botao:hover {
+    color: #ffffff;
+    background-color: #4b4b4b;
+}
+
+.caixa_print {
+    display: flex;
+    align-items: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+}
+
+.respo {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.print {
+    color: aquamarine;
+}
+
+.caixa {
+    border: 2px black;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
