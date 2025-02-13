@@ -4,8 +4,58 @@
 
 .conteudo_header{
     display: flex ;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: rgb(0, 60, 255);
+    flex-direction: row;
+    padding: 10px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 4px 6px #3636366b;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.nav_itens {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    gap: 50px;
+    margin-left: 35px;
+}
+
+.nav_itens > .links_itens {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+}
+
+.links_itens:hover {
+
+}
+
+.button_header{
+    margin-left: auto;
+}
+
+.StarderButton {
+    background-color: #0566BB;
+    padding: 10px 20px;
+
+    font-family: 'Poppins';
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.StarderButton:hover {
+    background-color: #4E97D7;
 }

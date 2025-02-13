@@ -11,18 +11,25 @@ export default function Header () {
         <header className = {styles.header}>
             <div className={styles.conteudo_header}>
                 <div className={styles.logo}>
+                    <Image src="/img/logo_MedVital.png" width={150} height={85} alt="Logo Cantinho do Sabor" />
                 </div>
 
-                <nav>
-                    <ul className = {styles.navbar}>
+                <nav className={styles.navbar}>
+                    <ul className = {styles.nav_itens}>
                         <li className={styles.links_itens}><Link href='/'>Home</Link></li>
-                        <li className={styles.links_itens}><Link href='/about'>Sobre</Link></li>
-                        <li className={styles.links_itens}><Link href='/contact'>Contato</Link></li>
-                        <li className={styles.links_itens}><Link href='/listas'>Lista</Link></li>
+                        <li className={styles.links_itens}>Médicos
+                        {/* <ul className={styles.submenu}>
+                            <li>Test</li>
+                        </ul> */}
+                        </li>
+                        <li className={styles.links_itens}>Pacientes</li>
+                        <li className={styles.links_itens}>Agendamento</li>
                     </ul>
                 </nav>
 
-                <button className={styles.button_mobli}></button>
+                <div className={styles.button_header}>
+                    <button className={styles.StarderButton}>Agendar consulta</button>
+                </div>
             </div>
         </header>
     );
