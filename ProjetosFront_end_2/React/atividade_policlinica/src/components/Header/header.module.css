@@ -1,5 +1,5 @@
 .header {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .conteudo_header{
@@ -11,10 +11,15 @@
     box-shadow: 5px 4px 6px #3636366b;
 }
 
-.logo {
+.logoContainer {
     display: flex;
     justify-content: center;
     margin-right: 25px;
+}
+
+.logo {
+    height: unset;
+    width: unset;
 }
 
 .nav_itens {
@@ -22,19 +27,62 @@
     align-items: center;
     flex-direction: row;
     list-style: none;
+
     gap: 50px;
     margin-left: 35px;
 }
 
 .nav_itens > .links_itens {
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     color: black;
+    transition: 0.3s;
+}
+
+.nav_itens > .links_itens:hover .submenu {
+    max-height: 100%;
+    transition: 3s;
+}
+
+.submenu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    left: auto;
+    width: 166px;
+    background-color: #FFFFFF;
+}
+
+.links_subemenu {
+    padding: 15px 15px 16px 20px;
+
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+
+    border-left: 5px solid transparent;
+    transition: 0.4s;
+}
+
+.tamanh_g {
+    width: 240px;
+}
+
+.links_subemenu:hover {
+    width: 100%;
+    background-color: #F3F3F3;
+    box-shadow: 0 2px 2px #00000026;
+    border-left-color:#0566BB;
 }
 
 .links_itens:hover {
-
+    color: #4E97D7;
 }
 
 .button_header{
