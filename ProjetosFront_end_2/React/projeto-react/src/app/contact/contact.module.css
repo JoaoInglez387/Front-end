@@ -1,0 +1,16 @@
+.main {
+    margin: 0;
+    padding: 0;
+}
+.div_pag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_pag > .titule {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0 0 0;
+}

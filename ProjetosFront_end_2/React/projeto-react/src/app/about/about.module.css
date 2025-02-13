@@ -1,0 +1,36 @@
+.main {
+    margin: 0;
+    padding: 0;
+}
+.div_pag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_pag > .titule {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0 30px;
+}
+
+.div_p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.paragrafo {
+    font-size: 18px;
+    font-weight: 500;
+    color: cadetblue;
+}
+
+#paragrafoUnico {
+    font-weight: 500;
+    color: #0084ff;
+    background-color: rgb(168, 177, 255);
+}
