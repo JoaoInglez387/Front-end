@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function PageHome() {
   return (
-    <main className={styles.main}>
+    <main className={styles.contener_master}>
         <section className={styles.contener_banner}>
             <div className={styles.banner}>
-                {/* <Image src="/img/banner_home.jpg" layout="fill" objectFit="contain" alt="Banner do Home MediVital"/> */}
+                <img className={styles.img_banner} src="/img/banner_home.jpg" alt="Banner do Home MediVital"/>
             </div>
         </section>
         <section className={styles.page_contener}>

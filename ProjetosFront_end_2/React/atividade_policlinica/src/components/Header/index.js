@@ -19,7 +19,7 @@ export default function Header () {
                         <li className={styles.links_itens}><Link href='/'>Home</Link></li>
                         <li className={styles.links_itens}>Médicos
                             <ul className={styles.submenu}>
-                                <li className={styles.links_subemenu}><Link href='/'>Listar</Link></li>
+                                <li className={styles.links_subemenu}><Link href='/pages/medicos/listar'>Listar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Adicionar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Editar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Excluir</Link></li>
