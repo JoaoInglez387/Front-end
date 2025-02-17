@@ -27,7 +27,7 @@ export default function Header () {
                         </li>
                         <li className={styles.links_itens}>Pacientes
                             <ul className={styles.submenu}>
-                                <li className={styles.links_subemenu}><Link href='/'>Listar</Link></li>
+                                <li className={styles.links_subemenu}><Link href='/pages/pacientes/listar'>Listar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Adicionar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Editar</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Excluir</Link></li>
@@ -35,7 +35,7 @@ export default function Header () {
                         </li>
                         <li className={styles.links_itens}>Agendamento
                             <ul className={`${styles.submenu} ${styles.tamanh_g}`}>
-                                <li className={styles.links_subemenu}><Link href='/'>Listar Consultas</Link></li>
+                                <li className={styles.links_subemenu}><Link href='/pages/pacientes/listar'>Listar Consultas</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Agendar Consultas</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Editar Consultas</Link></li>
                                 <li className={styles.links_subemenu}><Link href='/'>Cancelar</Link></li>

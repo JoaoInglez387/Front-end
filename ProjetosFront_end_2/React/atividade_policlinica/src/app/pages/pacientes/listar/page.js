@@ -4,29 +4,29 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function PageListarMedicos() {
-    const [medicos, setMedicos] = useState([]);
+    const [pacientes, setPacientes] = useState([]);
     const [showBuscar, setShowBuscar] = useState(false);
     const [consultar, setConsultar] = useState([]);
 
-    const buscarMedicos = async () => {
+    const buscarPacientes = async () => {
         try {
-            const respose = await fetch('https://api-clinica-2a.onrender.com/medicos');
+            const respose = await fetch('https://api-clinica-2a.onrender.com/pacientes');
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
             }
 
             const data = await respose.json();
-            setMedicos(data);
+            setPacientes(data);
 
         } catch (error) {
             console.log('Ocorreu algum erro: ' + error);  
         }
     }
 
-    const buscarMedicosPorNome = async (nome) => {
+    const buscarPacientesPorNome = async (nome) => {
         try {
-            const respose = await fetch(`https://api-clinica-2a.onrender.com/medicos?nome=${nome}`);
+            const respose = await fetch(`https://api-clinica-2a.onrender.com/pacientes?nome=${nome}`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
@@ -41,17 +41,17 @@ export default function PageListarMedicos() {
     }
 
     useEffect(() => {
-        buscarMedicos();
-        buscarMedicosPorNome('');
+        buscarPacientes();
+        buscarPacientesPorNome('');
     },[]);
 
     return(
         <main className={styles.contener_master}>
             <section className={styles.contener_lista}>
                 <div className={styles.header_list}>
-                    <h1 className={styles.titulo_list}>Lista de Médicos</h1>
+                    <h1 className={styles.titulo_list}>Lista de Pacientes</h1>
                     <div className={styles.contener_button}>
-                        <button className={styles.StarderButton} onClick={() => setShowBuscar(!showBuscar)}>Buscar Médicos</button>
+                        <button className={styles.StarderButton} onClick={() => setShowBuscar(!showBuscar)}>Buscar Pacientes</button>
                     </div>
                     {
                     showBuscar && ( 
@@ -59,9 +59,9 @@ export default function PageListarMedicos() {
                             <div className={styles.fundo_pop} onClick={() => setShowBuscar(!showBuscar)}></div>
                             <div className={styles.conteudo_buscar}>
                                 <div className={styles.header_buscar}>
-                                    <h1 className={styles.titulo_buscar}>Buscar Médicos</h1>
+                                    <h1 className={styles.titulo_buscar}>Buscar Pacientes</h1>
                                     <div className={styles.contener_buscar}>
-                                        <input type="text" onChange={(r) => buscarMedicosPorNome(r.target.value)} placeholder="Digite o nome do médico" className={styles.input_buscar}/>
+                                        <input type="text" onChange={(e) => buscarPacientesPorNome(e.target.value)} placeholder="Digite o nome do paciente" className={styles.input_buscar}/>
                                     </div>
                                 </div>
                                 <div className={styles.table_buscar}>
@@ -82,16 +82,16 @@ export default function PageListarMedicos() {
                                 <th scope="col">Nome</th>
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Especialidade</th>
+                                <th scope="col">CPF</th>
                             </tr>
                         </thead>
-                        <tbody className={styles.corpo_table}>{medicos.map((med) => (
-                            <tr key={med.id} className={styles.conteudo_table}>
-                                <td>{med.id}</td>
-                                <td>{med.nome}</td>
-                                <td>{med.telefone}</td>
-                                <td>{med.email}</td>
-                                <td>{med.especialidade}</td>
+                        <tbody className={styles.corpo_table}>{pacientes.map((pac) => (
+                            <tr key={pac.id} className={styles.conteudo_table}>
+                                <td>{pac.id}</td>
+                                <td>{pac.nome}</td>
+                                <td>{pac.telefone}</td>
+                                <td>{pac.email}</td>
+                                <td>{pac.cpf}</td>
                             </tr>))}
                         </tbody>
                     </table>

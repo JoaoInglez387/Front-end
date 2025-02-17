@@ -6,11 +6,16 @@
   --medium_whitesmoke: #ECE9E9;
   
   --black: #000000;
+  --medium_black: #00000080;
   --dark_grey: #171717;
-  --medium_grey-ligth: #3636366b;
   --medium_black_ligth: #00000026;
+
   --grey: #666666;
+  --ghostwhite: #F5F5F5;
+  --ligth_grey:#ddd;
+  --medium_grey_ligth: #3636366b;
   --medium_grey: #CDCACA;
+  --dary_medium_grey: #2e2e2e;
 
   --dodgerblue:#0566BB;
   --medium_dodgerblue:#4E97D7;
@@ -41,3 +46,12 @@ a {
   text-decoration: none;
 }
 
+div ::-webkit-scrollbar {
+  border-radius: 8px;
+  background: var(--ghostwhite);
+}
+   
+div ::-webkit-scrollbar-thumb {
+  background: var(--medium_dodgerblue);
+  border-radius: 10px;
+}
