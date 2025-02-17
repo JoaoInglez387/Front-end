@@ -75,3 +75,39 @@
     padding: 5px;
     color: black;
 }
+
+
+.div_buscar {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 10000;
+    background-color: azure;
+    overflow: auto;
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+}
+
+.header_buscar {
+    margin: 1px auto;
+    background-color: aquamarine;
+    width: 40%;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 100000;
+}
+
+.input_buscar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button_sair {
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: 1px solid brown;
+    width: 80%;
+}
