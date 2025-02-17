@@ -54,46 +54,48 @@ export default function PageListarMedicos() {
                         <button className={styles.StarderButton} onClick={() => setShowBuscar(!showBuscar)}>Buscar os médicos</button>
                     </div>
                     {
-                        showBuscar &&
-                        <div className={styles.div_buscar}>
+                    showBuscar && ( 
+                        <>
+                            <div className={styles.fundo_pop} onClick={() => setShowBuscar(!showBuscar)}></div>
                             <div className={styles.conteudo_buscar}>
                                 <div className={styles.header_buscar}>
-                                    <div className={styles.input_buscar}>
-                                        <input type="text" onChange={(r) => buscarMedicosPorNome(r.target.value)}/>
-                                        <button onClick={() => setShowBuscar(!showBuscar)} className={styles.button_sair}>X</button>
+                                    <h1 className={styles.titulo_buscar}>Buscar Médicos</h1>
+                                    <div className={styles.contener_buscar}>
+                                        <input type="text" onChange={(r) => buscarMedicosPorNome(r.target.value)} placeholder="Digite o nome do médico" className={styles.input_buscar}/>
                                     </div>
                                 </div>
-                                <div className={styles.table_buscar}>
+                                {/* <div className={styles.table_buscar}>
                                     <ul>{consultar.map((consu) => (
                                         <li className={styles.list_buscar} key={consu.id}>{consu.nome}</li>
-                                    ))}</ul>
-                                </div>
+                                        ))}</ul>
+                                </div> */}
                             </div>
-                        </div>
-                    }
-
+                            
+                        </>
+                    )}
                 </div>
-               {/*  <div className={styles.table_list}>
+               <div className={styles.table_list}>
                     <table className={styles.tabela_geral}>
                         <thead className={styles.header_table}>
-                            <tr className={styles.conteudo_table}>
-                                <th scope="col" className={styles.colun_table}>ID</th>
-                                <th scope="col" className={styles.colun_table}>Nome</th>
-                                <th scope="col" className={styles.colun_table}>Telefone</th>
-                                <th scope="col" className={styles.colun_table}>Email</th>
-                                <th scope="col" className={styles.colun_table}>Especialidade</th>
+                            <tr className={styles.conteudo_header}>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Especialidade</th>
                             </tr>
                         </thead>
-                        <tbody>{medicos.map((med) => (<tr key={med.id}>
-                            <th>{med.id}</th>
-                            <th>{med.nome}</th>
-                            <th>{med.telefone}</th>
-                            <th>{med.email}</th>
-                            <th>{med.especialidade}</th>
-                        </tr>))}
+                        <tbody className={styles.corpo_table}>{medicos.map((med) => (
+                            <tr key={med.id} className={styles.conteudo_table}>
+                                <td>{med.id}</td>
+                                <td>{med.nome}</td>
+                                <td>{med.telefone}</td>
+                                <td>{med.email}</td>
+                                <td>{med.especialidade}</td>
+                            </tr>))}
                         </tbody>
                     </table>
-                </div> */}
+                </div>
             </section>
         </main>
     );

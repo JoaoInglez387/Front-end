@@ -3,11 +3,14 @@
 :root {
   --white: #ffffff;
   --whitesmoke:#F3F3F3;
+  --medium_whitesmoke: #ECE9E9;
+  
   --black: #000000;
   --dark_grey: #171717;
   --medium_grey-ligth: #3636366b;
   --medium_black_ligth: #00000026;
   --grey: #666666;
+  --medium_grey: #CDCACA;
 
   --dodgerblue:#0566BB;
   --medium_dodgerblue:#4E97D7;
