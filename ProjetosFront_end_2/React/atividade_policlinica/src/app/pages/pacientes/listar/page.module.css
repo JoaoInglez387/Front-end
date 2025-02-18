@@ -188,3 +188,21 @@
 .dados_table_buscar > li {
     padding-bottom: 10px;
 }
+
+@media (max-width: 515px) {
+    .conteudo_buscar {
+        min-width: 400px;
+        width: 25%;
+    }
+}
+
+@media (max-width: 500px) {
+    .titulo_list {
+        font-size: 1.9rem;
+    }
+
+    .conteudo_buscar {
+        min-width: 380px;
+        width: 20%;
+    }
+}

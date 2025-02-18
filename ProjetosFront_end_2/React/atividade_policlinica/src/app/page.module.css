@@ -65,3 +65,13 @@
 .StarderButton:hover {
     background-color: var(--medium_dodgerblue);
 }
+
+@media (max-width: 500px) {
+    .text_inicio > .titulo_text {
+        font-size: 1.9rem;
+    }
+
+    .text_inicio > .conteudo_text {
+        font-size: 1.1rem;
+    }
+}
