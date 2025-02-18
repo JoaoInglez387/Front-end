@@ -27,6 +27,7 @@
 .contener_button {
     display: flex;
     align-items: flex-start;
+    gap: 50px;
 }
 
 .StarderButton {
@@ -187,4 +188,10 @@
 
 .dados_table_buscar > li {
     padding-bottom: 10px;
+}
+
+@media (max-width: 1080px) {
+    .contener_button {
+        flex-direction: column;
+    }
 }

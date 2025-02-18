@@ -5,14 +5,16 @@ import { useState, useEffect } from "react";
 
 export default function PageListarMedicos() {
     const [buscar, setBuscar] = useState([]);
-    const [consultasPorMedicos, setConsultasPorMedicos] = useState([]);
-    const [consultasPorPacientes, setConsultasPorPacientes] = useState([]);
+    const [consultasMedicos, setConsultasMedicos] = useState([]);
+    const [consultasPacientes, setConsultasPacientes] = useState([]);
     const [showBuscarMedicos, setShowBuscarMedicos] = useState(false);
     const [showBuscarPacientes, setShowBuscarPacientes] = useState(false);
 
+    const url = 'https://api-clinica-2a.onrender.com';
+
     const buscaGeral = async () => {
         try {
-            const respose = await fetch('https://api-clinica-2a.onrender.com/pacientes');
+            const respose = await fetch(`${url}/consultas`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
@@ -26,73 +28,43 @@ export default function PageListarMedicos() {
         }
     }
 
-    const buscarMedicos = async () => {
+    const buscarMedicos = async (nome) => {
         try {
-            const respose = await fetch('https://api-clinica-2a.onrender.com/medicos');
+            const respose = await fetch(`${url}/consultas?medico=${nome}`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
             }
 
             const data = await respose.json();
-            setMedicos(data);
+            setConsultasMedicos(data);
 
         } catch (error) {
             console.log('Ocorreu algum erro: ' + error);  
         }
     }
 
-    const buscarPacientes = async () => {
+    const buscarPacientes = async (nome) => {
         try {
-            const respose = await fetch('https://api-clinica-2a.onrender.com/pacientes');
+            const respose = await fetch(`${url}/consultas?paciente=${nome}`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
             }
 
             const data = await respose.json();
-            setPacientes(data);
+            setConsultasPacientes(data);
 
         } catch (error) {
             console.log('Ocorreu algum erro: ' + error);  
         }
     }
 
-    const buscarMedicosPorNome = async (nome) => {
-        try {
-            const respose = await fetch(`https://api-clinica-2a.onrender.com/medicos?nome=${nome}`);
-            
-            if(!respose.ok) {
-                throw new Error('Erro ao buscar os dados: ' + respose.statusText);
-            }
-
-            const data = await respose.json();
-            setConsultar(data);
-
-        } catch (error) {
-            console.log('Ocorreu algum erro: ' + error);  
-        }
-    }
-
-    const buscarPacientesPorNome = async (nome) => {
-        try {
-            const respose = await fetch(`https://api-clinica-2a.onrender.com/pacientes?nome=${nome}`);
-            
-            if(!respose.ok) {
-                throw new Error('Erro ao buscar os dados: ' + respose.statusText);
-            }
-
-            const data = await respose.json();
-            setConsultar(data);
-
-        } catch (error) {
-            console.log('Ocorreu algum erro: ' + error);  
-        }
-    }
 
     useEffect(() => {
-        buscarPacientes();
-        buscarPacientesPorNome('');
+        buscaGeral();
+        buscarMedicos('');
+        buscarPacientes('');
     },[]);
 
     return(
@@ -101,52 +73,71 @@ export default function PageListarMedicos() {
                 <div className={styles.header_list}>
                     <h1 className={styles.titulo_list}>Lista de Consultas</h1>
                     <div className={styles.contener_button}>
-                        <button className={styles.StarderButton} onClick={() => setShowBuscar(!showBuscar)}>Buscar por Médicos</button>
-                        <button className={styles.StarderButton} onClick={() => setShowBuscar(!showBuscar)}>Buscar por Pacientes</button>
-                    </div>
-                    {
-                    showBuscar && ( 
-                        <>
-                            <div className={styles.fundo_pop} onClick={() => setShowBuscar(!showBuscar)}></div>
-                            <div className={styles.conteudo_buscar}>
-                                <div className={styles.header_buscar}>
-                                    <h1 className={styles.titulo_buscar}>Buscar Pacientes</h1>
-                                    <div className={styles.contener_buscar}>
-                                        <input type="text" onChange={(e) => buscarPacientesPorNome(e.target.value)} placeholder="Digite o nome do paciente" className={styles.input_buscar}/>
+                        <button className={styles.StarderButton} onClick={() => setShowBuscarMedicos(!showBuscarMedicos)}>Buscar por Médicos</button>
+                        {
+                            showBuscarMedicos && ( 
+                                <>
+                                    <div className={styles.fundo_pop} onClick={() => setShowBuscarMedicos(!showBuscarMedicos)}></div>
+                                    <div className={styles.conteudo_buscar}>
+                                        <div className={styles.header_buscar}>
+                                            <h1 className={styles.titulo_buscar}>Buscar Médicos</h1>
+                                            <div className={styles.contener_buscar}>
+                                                <input type="text" onChange={(e) => buscarMedicos(e.target.value)} placeholder="Digite o nome do medico" className={styles.input_buscar}/>
+                                            </div>
+                                        </div>
+                                        <div className={styles.table_buscar}>
+                                            <ul className={styles.dados_table_buscar}>{consultasMedicos.map((medico) => (
+                                                <li className={styles.list_buscar} key={medico.id}>{medico.nome}</li>
+                                                ))}</ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className={styles.table_buscar}>
-                                    <ul className={styles.dados_table_buscar}>{consultar.map((consu) => (
-                                        <li className={styles.list_buscar} key={consu.id}>{consu.nome}</li>
-                                        ))}</ul>
-                                </div>
-                            </div>
-                            
-                        </>
-                    )}
+                                </>
+                        )}
+
+                        <button className={styles.StarderButton} onClick={() => setShowBuscarPacientes(!showBuscarPacientes)}>Buscar por Pacientes</button>
+                        {
+                            showBuscarPacientes && ( 
+                                <>
+                                    <div className={styles.fundo_pop} onClick={() => setShowBuscarPacientes(!showBuscarPacientes)}></div>
+                                    <div className={styles.conteudo_buscar}>
+                                        <div className={styles.header_buscar}>
+                                            <h1 className={styles.titulo_buscar}>Buscar Pacientes</h1>
+                                            <div className={styles.contener_buscar}>
+                                                <input type="text" onChange={(p) => buscarPacientes(p.target.value)} placeholder="Digite o nome do paciente" className={styles.input_buscar}/>
+                                            </div>
+                                        </div>
+                                        <div className={styles.table_buscar}>
+                                            <ul className={styles.dados_table_buscar}>{consultasPacientes.map((paciente) => (
+                                                <li className={styles.list_buscar} key={paciente.id}>{paciente.nome}</li>
+                                                ))}</ul>
+                                        </div>
+                                    </div>
+                                </>
+                        )}
+                    </div>
                 </div>
-               {/* <div className={styles.table_list}>
+               <div className={styles.table_list}>
                     <table className={styles.tabela_geral}>
                         <thead className={styles.header_table}>
                             <tr className={styles.conteudo_header}>
                                 <th scope="col">ID</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Telefone</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">CPF</th>
+                                <th scope="col">Médico</th>
+                                <th scope="col">Especialidade</th>
+                                <th scope="col">Paciente</th>
+                                <th scope="col">Tipo</th>
                             </tr>
                         </thead>
-                        <tbody className={styles.corpo_table}>{pacientes.map((pac) => (
-                            <tr key={pac.id} className={styles.conteudo_table}>
-                                <td>{pac.id}</td>
-                                <td>{pac.nome}</td>
-                                <td>{pac.telefone}</td>
-                                <td>{pac.email}</td>
-                                <td>{pac.cpf}</td>
+                        <tbody className={styles.corpo_table}>{buscar.map((buscar) => (
+                            <tr key={buscar.id} className={styles.conteudo_table}>
+                                <td>{buscar.id}</td>
+                                <td>{buscar.medico}</td>
+                                <td>{buscar.especialidade}</td>
+                                <td>{buscar.paciente}</td>
+                                <td>{buscar.tipo}</td>
                             </tr>))}
                         </tbody>
                     </table>
-                </div> */}
+                </div>
             </section>
         </main>
     );
