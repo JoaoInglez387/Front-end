@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Clinica MediVital",
+  title: "Clínica MedVital",
   description: "Site de uma Clinica Médica",
   charset: "UTF-8",
   author: "João Gabriel Soares Inglez",
-  keywords: "HTML, CSS, JavaScript, React, Next.js, Clinica Medica, MediVital, Saúde",
+  keywords: "HTML, CSS, JavaScript, React, Next.js, Clínica, Medica, MedVital, Saúde",
 };
 
 export default function RootLayout({ children }) {
