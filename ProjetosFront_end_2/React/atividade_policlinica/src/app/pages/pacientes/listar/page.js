@@ -8,9 +8,11 @@ export default function PageListarMedicos() {
     const [showBuscar, setShowBuscar] = useState(false);
     const [consultar, setConsultar] = useState([]);
 
+    const url = 'https://api-clinica-2a.onrender.com';
+
     const buscarPacientes = async () => {
         try {
-            const respose = await fetch('https://api-clinica-2a.onrender.com/pacientes');
+            const respose = await fetch(`${url}/pacientes`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
@@ -26,7 +28,7 @@ export default function PageListarMedicos() {
 
     const buscarPacientesPorNome = async (nome) => {
         try {
-            const respose = await fetch(`https://api-clinica-2a.onrender.com/pacientes?nome=${nome}`);
+            const respose = await fetch(`${url}/pacientes?nome=${nome}`);
             
             if(!respose.ok) {
                 throw new Error('Erro ao buscar os dados: ' + respose.statusText);
